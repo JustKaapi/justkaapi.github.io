@@ -104,7 +104,7 @@
                 </div>
             </div>
 
-            <div id="shipping-address-tab" style="display: none; margin: 0px 3px;">
+            <div id="shipping-address-tab" style="display: none;">
 
                 <div style="display: flex; justify-content: space-around;">
                     <div style="display: flex; justify-content: center; gap: 10px; padding: 10px 10px; width: 100%;">
@@ -131,10 +131,10 @@
                                 <input class="line-height-150" id="user-name" required>
 
                                 <span>Phone:</span>
-                                <input class="line-height-150" id="user-phone" required>
+                                <input class="line-height-150" id="user-phone" type="number" minlength="10" required>
 
                                 <span>Email:</span>
-                                <input class="line-height-150" id="user-phone" required>
+                                <input class="line-height-150" id="user-phone" type="email" required>
 
                             </div>
 
@@ -147,7 +147,7 @@
                                 <input class="line-height-150" id="user-city" required>
 
                                 <span>Pincode:</span>
-                                <input class="line-height-150" id="user-pincode" required>
+                                <input class="line-height-150" id="user-pincode" type="number" minlength="6" required>
 
                             </div>
 
