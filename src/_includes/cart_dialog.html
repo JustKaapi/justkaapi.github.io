@@ -10,12 +10,16 @@
         function tabBack() {
         }
 
+        function placeOrder() {
+            console.log("place order")
+        }
+
     </script>
 
     <style>
 
-        input:user-invalid {
-            box-shadow: red 1px 1px;
+        input:invalid {
+            box-shadow: red 2px 2px;
         }
 
     </style>
@@ -119,9 +123,9 @@
                 <div style="overflow-y: auto; height: calc(80vh - 160px); max-height: 250px;">
                     <form>
 
-                        <div style="display: flex; flex-direction: row; gap: 10px; width: 100%;">
+                        <div style="display: flex; flex-direction: row; gap: 10px; width: 100%; flex-wrap: wrap;">
 
-                            <div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+                            <div style="display: flex; flex-direction: column; gap: 10px; width: 100%; min-width: 175px; max-width: 300px;">
 
                                 <span>Name:</span>
                                 <input class="line-height-150" id="user-name" required>
@@ -134,7 +138,7 @@
 
                             </div>
 
-                            <div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+                            <div style="display: flex; flex-direction: column; gap: 10px; width: 100%; min-width: 175px; max-width: 300px;">
 
                                 <span>Address:</span>
                                 <input class="line-height-150" id="user-address" required>
@@ -157,7 +161,7 @@
                     <div style="display: flex; justify-content: end; gap: 10px;">
                         <button class="btn-secondary" type="button" style="min-width: 90px;"
                             onclick="tabNext('shipping-address-tab', 'order-review-tab')">Back</button>
-                        <input class="btn-primary" style="opacity: 1; min-width: 90px;" type="submit" value="Place Order">
+                        <input class="btn-primary" style="opacity: 1; min-width: 90px;" type="submit" value="Place Order" onclick="placeOrder()">
                     </div>
                 </div>
             </div>
