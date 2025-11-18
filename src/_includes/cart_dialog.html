@@ -17,11 +17,9 @@
     </script>
 
     <style>
-
         input:invalid {
             box-shadow: red 2px 2px;
         }
-
     </style>
 
     <div style="overflow: hidden;">
@@ -63,13 +61,16 @@
             <div id="order-review-tab">
 
                 <div style="display: flex; justify-content: space-around;">
-                    <div style="display: flex; justify-content: center; gap: 10px; padding: 10px 10px; width: 100%;">
+                    <div class="clickable"
+                        style="display: flex; justify-content: center; gap: 10px; padding: 10px 10px; width: 100%;">
                         <span class="active-tab"
                             style="display: block; color: #3f4254; text-align: center; border-radius: 50%; background-color: lightgrey; width: 20px; height: 20px;">1</span>
                         <span style="color: #3f4254;">Review Items</span>
                     </div>
 
-                    <div style="display: flex; justify-content: center; gap: 10px; padding: 10px 10px; width: 100%;">
+                    <div class="clickable"
+                        style="display: flex; justify-content: center; gap: 10px; padding: 10px 10px; width: 100%;"
+                        onclick="tabNext('order-review-tab', 'shipping-address-tab')">
                         <span
                             style="display: block; color: #3f4254; text-align: center; border-radius: 50%; background-color: lightgrey; width: 20px; height: 20px;">2</span>
                         <span style="color: #3f4254;">Shipping Address</span>
@@ -107,13 +108,16 @@
             <div id="shipping-address-tab" style="display: none;">
 
                 <div style="display: flex; justify-content: space-around;">
-                    <div style="display: flex; justify-content: center; gap: 10px; padding: 10px 10px; width: 100%;">
+                    <div class="clickable"
+                        style="display: flex; justify-content: center; gap: 10px; padding: 10px 10px; width: 100%;"
+                        onclick="tabNext('shipping-address-tab', 'order-review-tab')">
                         <span
                             style="display: block; color: #3f4254; text-align: center; border-radius: 50%; background-color: lightgrey; width: 20px; height: 20px;">1</span>
                         <span style="color: #3f4254;">Review Items</span>
                     </div>
 
-                    <div style="display: flex; justify-content: center; gap: 10px; padding: 10px 10px; width: 100%;">
+                    <div class="clickable"
+                        style="display: flex; justify-content: center; gap: 10px; padding: 10px 10px; width: 100%;">
                         <span class="active-tab"
                             style="display: block; color: #3f4254; text-align: center; border-radius: 50%; background-color: lightgrey; width: 20px; height: 20px;">2</span>
                         <span style="color: #3f4254;">Shipping Address</span>
@@ -125,7 +129,8 @@
 
                         <div style="display: flex; flex-direction: row; gap: 10px; width: 100%; flex-wrap: wrap;">
 
-                            <div style="display: flex; flex-direction: column; gap: 10px; width: 100%; min-width: 175px; max-width: 300px;">
+                            <div
+                                style="display: flex; flex-direction: column; gap: 10px; width: 100%; min-width: 175px; max-width: 300px;">
 
                                 <span>Name:</span>
                                 <input class="line-height-150" id="user-name" required>
@@ -138,7 +143,8 @@
 
                             </div>
 
-                            <div style="display: flex; flex-direction: column; gap: 10px; width: 100%; min-width: 175px; max-width: 300px;">
+                            <div
+                                style="display: flex; flex-direction: column; gap: 10px; width: 100%; min-width: 175px; max-width: 300px;">
 
                                 <span>Address:</span>
                                 <input class="line-height-150" id="user-address" required>
@@ -161,7 +167,8 @@
                     <div style="display: flex; justify-content: end; gap: 10px;">
                         <button class="btn-secondary" type="button" style="min-width: 90px;"
                             onclick="tabNext('shipping-address-tab', 'order-review-tab')">Back</button>
-                        <input class="btn-primary" style="opacity: 1; min-width: 90px;" type="submit" value="Place Order" onclick="placeOrder()">
+                        <input class="btn-primary" style="opacity: 1; min-width: 90px;" type="submit"
+                            value="Place Order" onclick="placeOrder()">
                     </div>
                 </div>
             </div>
